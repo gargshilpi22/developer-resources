@@ -1,0 +1,2233 @@
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 17:56:41 -0700
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/clee/.rvm/gems/ruby-1.9.3-p125@ceto/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 17:58:14 -0700
+Processing by MainController#index as HTML
+Completed 500 Internal Server Error in 20ms
+
+ActionView::MissingTemplate (Missing template main/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/clee/intro_rails/course_project/app/views"
+):
+  actionpack (3.2.3) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.3) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.3) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.3) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:414:in `_run__4289513622843287890__process_action__746896879195619102__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__1911250667869761321__call__3217390966117009140__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/clee/.rvm/gems/ruby-1.9.3-p125@ceto/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 17:58:29 -0700
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+Compiled application.css  (1788ms)  (pid 51003)
+Compiled jquery.js  (3ms)  (pid 51003)
+Compiled jquery_ujs.js  (0ms)  (pid 51003)
+Compiled bootstrap-transition.js  (0ms)  (pid 51003)
+Compiled bootstrap-affix.js  (0ms)  (pid 51003)
+Compiled bootstrap-alert.js  (0ms)  (pid 51003)
+Compiled bootstrap-button.js  (0ms)  (pid 51003)
+Compiled bootstrap-carousel.js  (0ms)  (pid 51003)
+Compiled bootstrap-collapse.js  (0ms)  (pid 51003)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 51003)
+Compiled bootstrap-modal.js  (0ms)  (pid 51003)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 51003)
+Compiled bootstrap-tab.js  (0ms)  (pid 51003)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 51003)
+Compiled bootstrap-popover.js  (0ms)  (pid 51003)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 51003)
+Compiled bootstrap.js  (160ms)  (pid 51003)
+Compiled application.js  (188ms)  (pid 51003)
+Completed 500 Internal Server Error in 2062ms
+
+ActionView::Template::Error (Missing partial layouts/navigation with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/clee/intro_rails/course_project/app/views"
+):
+    15:     <header class="navbar navbar-fixed-top">
+    16:       <nav class="navbar-inner">
+    17:         <div class="container">
+    18:           <%= render 'layouts/navigation' %>
+    19:         </div>
+    20:       </nav>
+    21:     </header>
+  app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb___1114370393389159438_70214419060040'
+
+
+  Rendered /Users/clee/.rvm/gems/ruby-1.9.3-p125@ceto/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/clee/.rvm/gems/ruby-1.9.3-p125@ceto/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/clee/.rvm/gems/ruby-1.9.3-p125@ceto/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /application.css - 200 OK (24ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-transition.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-affix.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-alert.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-button.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-carousel.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-collapse.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-modal.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-tab.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /bootstrap.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:40 -0700
+Served asset /application.js - 200 OK (14ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 17:59:58 -0700
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:00:18 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:08:26 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 18:11:03 -0700
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/test
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2012-10-02 18:11:03 -0700
+Processing by MainController#test as HTML
+Completed 500 Internal Server Error in 9ms
+
+ActionView::MissingTemplate (Missing template main/test, application/test with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/clee/intro_rails/course_project/app/views"
+):
+  actionpack (3.2.3) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.3) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.3) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.3) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.3) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.3) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.3) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.3) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:414:in `_run__551414464184089780__process_action__4283419220011158042__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.3) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.3) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.3) lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+  activerecord (3.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.3) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__107138125654918908__call__820054000827601581__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/clee/.rvm/rubies/ruby-1.9.3-p125/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/clee/.rvm/gems/ruby-1.9.3-p125@ceto/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (17.2ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Processing by MainController#test as HTML
+  Rendered main/test.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /application.css - 200 OK (25ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-transition.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-affix.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-alert.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-button.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-carousel.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-collapse.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-modal.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-tab.js - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-popover.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /bootstrap.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:15 -0700
+Served asset /application.js - 200 OK (36ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Processing by MainController#test as HTML
+  Rendered main/test.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:27 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 18:11:30 -0700
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/test
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2012-10-02 18:11:30 -0700
+Processing by MainController#test as HTML
+  Rendered main/test.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:11:30 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:31 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/test
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Processing by MainController#test as HTML
+  Rendered main/test.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:33 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Processing by MainController#test as HTML
+  Rendered main/test.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:37 -0700
+Served asset /application.js - 200 OK (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Processing by MainController#index as HTML
+Redirected to http://localhost:3000/test
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/test" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Processing by MainController#test as HTML
+  Rendered main/test.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-affix.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-transition.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-button.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-carousel.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-collapse.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-modal.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-scrollspy.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-popover.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap-typeahead.js - 200 OK (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /bootstrap.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-02 18:11:40 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-10 19:34:26 -0600
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (3.2ms)
+Compiled application.css  (3591ms)  (pid 10201)
+Compiled jquery.js  (12ms)  (pid 10201)
+Compiled jquery_ujs.js  (0ms)  (pid 10201)
+Compiled bootstrap-transition.js  (0ms)  (pid 10201)
+Compiled bootstrap-affix.js  (0ms)  (pid 10201)
+Compiled bootstrap-alert.js  (0ms)  (pid 10201)
+Compiled bootstrap-button.js  (0ms)  (pid 10201)
+Compiled bootstrap-carousel.js  (0ms)  (pid 10201)
+Compiled bootstrap-collapse.js  (0ms)  (pid 10201)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 10201)
+Compiled bootstrap-modal.js  (0ms)  (pid 10201)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 10201)
+Compiled bootstrap-tab.js  (0ms)  (pid 10201)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 10201)
+Compiled bootstrap-popover.js  (0ms)  (pid 10201)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 10201)
+Compiled bootstrap.js  (235ms)  (pid 10201)
+Compiled application.js  (347ms)  (pid 10201)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 4184ms (Views: 4183.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-transition.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-affix.js - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-alert.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-button.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-dropdown.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-scrollspy.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-carousel.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-modal.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-collapse.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-tab.js - 200 OK (6ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-typeahead.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-tooltip.js - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap.js - 200 OK (26ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /bootstrap-popover.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-10 19:34:30 -0600
+Served asset /application.js - 200 OK (56ms)
+  [1m[36m (34.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20121211032955)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "url" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121211032955')[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("posts")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-10 21:44:10 -0600
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<#<Class:0x007fb69564e008>:0x007fb695701518>):
+    1: <h2>Welcome to your first app!</h2>
+    2: <%= link_to "My Blog", posts_path %>
+  app/views/main/index.html.erb:2:in `_app_views_main_index_html_erb__3662727175151754110_70211100181600'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-10 21:44:40 -0600
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.5ms)
+Compiled posts.css  (49ms)  (pid 10860)
+Compiled application.css  (1886ms)  (pid 10860)
+Compiled posts.js  (299ms)  (pid 10860)
+Compiled application.js  (323ms)  (pid 10860)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 2544ms (Views: 2543.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /posts.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /posts.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-10 21:44:43 -0600
+Served asset /bootstrap.js - 304 Not Modified (21ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-10 21:53:22 -0600
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-10 22:26:00 -0600
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 176ms (Views: 175.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /posts.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /bootstrap.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-10 22:26:01 -0600
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2012-12-10 22:26:11 -0600
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  actionpack (3.2.3) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__2765160221148334149__call__174674334958386387__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.1ms)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2012-12-10 22:32:25 -0600
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  actionpack (3.2.3) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__2765160221148334149__call__174674334958386387__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2012-12-10 22:32:29 -0600
+
+AbstractController::ActionNotFound (The action 'show' could not be found for PostsController):
+  actionpack (3.2.3) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.3) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.3) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.3) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.3) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/cookies.rb:338:in `call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__2765160221148334149__call__174674334958386387__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (31.7ms)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2012-12-10 22:34:07 -0600
+
+ActionController::RoutingError (No route matches [GET] "/posts/index"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/shilpigarg/.rvm/rubies/ruby-1.9.3-p327/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /posts.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:17 -0600
+Served asset /bootstrap.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:18 -0600
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 18.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-10 22:34:23 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-10 22:39:32 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 87ms
+
+ActionView::Template::Error (undefined method `post_path' for #<#<Class:0x007faf6e4d7950>:0x007faf6e6f5278>):
+    8: 
+    9: <% @posts.each do |post| %>
+    10: 	<tr>
+    11: 		<td><%= link_to post.title, post %></td>
+    12: 	</tr>
+    13: <% end %>
+    14: </table>
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___1497915532717213884_70195724178740'
+  app/views/posts/index.html.erb:9:in `each'
+  app/views/posts/index.html.erb:9:in `_app_views_posts_index_html_erb___1497915532717213884_70195724178740'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-10 22:40:48 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `post_path' for #<#<Class:0x007faf6e4d7950>:0x007faf6f56cba8>):
+    8: 
+    9: <% @posts.each do |post| %>
+    10: 	<tr>
+    11: 		<td><%= link_to 'post.title', post %></td>
+    12: 	</tr>
+    13: <% end %>
+    14: </table>
+  app/views/posts/index.html.erb:11:in `block in _app_views_posts_index_html_erb___1497915532717213884_70195731994740'
+  app/views/posts/index.html.erb:9:in `each'
+  app/views/posts/index.html.erb:9:in `_app_views_posts_index_html_erb___1497915532717213884_70195731994740'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 85.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Served asset /posts.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:05 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /bootstrap.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-10 22:41:06 -0600
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-11 17:41:47 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" 
+  Rendered posts/index.html.erb within layouts/application (95.5ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 412ms (Views: 248.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-11 17:41:49 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-11 17:53:39 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 314ms (Views: 244.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /bootstrap.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-11 17:53:40 -0600
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-11 17:56:48 -0600
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 251ms (Views: 250.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /posts.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:50 -0600
+Served asset /application.js - 304 Not Modified (28ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-11 17:56:54 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (18.9ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 18.3ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /posts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-11 17:56:55 -0600
+Served asset /application.js - 304 Not Modified (1ms)
