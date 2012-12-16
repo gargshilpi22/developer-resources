@@ -13,7 +13,13 @@
 		<% @posts.each do |post| %>
 			<tr>
 				<td><%= post.comments.count %></td>
-				<td><%=link_to post.title, post.url%></td>
+				<td>
+					<%=link_to post.title, post.url%>
+					<br/>
+					<div class="mystyle">
+						<%=link_to "comments", controller:"posts", action:"show", id:post.id%> 
+					</div>
+				</td>
 				<td><%= post.created_at %></td>
 			</tr>
 		<% end %>
