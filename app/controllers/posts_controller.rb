@@ -13,4 +13,9 @@ class PostsController < ApplicationController
     	end
 	end
 
+	def new
+		title = params[:title]
+		url = params[:url]
+	end
+
 end

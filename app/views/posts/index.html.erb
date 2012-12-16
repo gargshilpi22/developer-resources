@@ -17,6 +17,7 @@
 					<%=link_to post.title, post.url%>
 					<br/>
 					<div class="mystyle">
+						<%= post.comments.count %>
 						<%=link_to "comments", controller:"posts", action:"show", id:post.id%> 
 					</div>
 				</td>
