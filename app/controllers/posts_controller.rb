@@ -14,8 +14,14 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		title = params[:title]
-		url = params[:url]
+		@post = Post.new
+	end
+
+	def create
+		post = Post.new(params[:post])
+		post.save
+      	redirect_to(posts_path)
+  	
 	end
 
 end

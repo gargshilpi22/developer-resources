@@ -1,13 +1,9 @@
-<h3> New Post </h3>
-
-<form class="well">
-	
-	<label>Title:</label>  
-	<input type="text" class= "span3" name="title"/>
-
-	<label>Url:</label>  
-	<input type="text" class="span3" name="url"/>
-
+<h3> New Post </h2>
+<%= form_for @post, :url => {:action => "create"}, :html => {:class => "well"} do |f| %>
+	<%= label(:title, "Title:") %>
+	<%= f.text_field :title %>
+	<%= label(:url, "Url:") %>
+	<%= f.text_field :url %>
 	<br/><br/>
-	<%= link_to 'Submit', posts_path, :class => 'btn btn-primary'%>
-</form>
+	<%= f.submit "Create Post", :class=>"btn btn-primary" %>
+<% end %>
