@@ -18,7 +18,7 @@
 					<br/>
 					<div class="mystyle">
 						<%= post.comments.count %>
-						<%=link_to "comments", controller:"posts", action:"show", id:post.id%> 
+						<%= link_to 'comments', post_comments_path(post.id) %>
 					</div>
 				</td>
 				<td><%= post.created_at %></td>

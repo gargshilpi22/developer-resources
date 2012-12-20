@@ -1,5 +1,6 @@
 CourseProject::Application.routes.draw do
-  root to: "main#index"
-  resources :posts
-  resources :comments
+  resources :posts do
+  	resources :comments
+  end
+
 end

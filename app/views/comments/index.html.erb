@@ -1,0 +1,20 @@
+
+<h2> <%= link_to @post.title, @post.url%> </h2>
+<h6> No. of comments: <%= @post.comments.count %> </h6>
+
+comments:
+<ul class="inline">
+	<% @post.comments.each do |comment| %>	
+		<li>
+			<%= comment.content %>
+		</li>
+	<%end%>
+</ul>
+
+
+<%= form_for([@post, @comment]) do |f| %>
+	<%= f.label(:content, "Comment: ") %>
+	<%= f.text_area(:content, rows:5) %>
+	<br/>
+	<%= f.submit "Add comment", :class=>"btn" %>
+<% end %>
