@@ -1,9 +1,9 @@
 <h3> New Post </h2>
-<%= form_for @post, :url => {:action => "create"}, :html => {:class => "well"} do |f| %>
-	<%= label(:title, "Title:") %>
-	<%= f.text_field :title %>
-	<%= label(:url, "Url:") %>
-	<%= f.text_field :url %>
+<%= form_tag '/posts', :method => 'create', :html => {:class => "well"} do %>
+	<%= label_tag(:title, "Title:") %>
+	<%= text_field_tag :title %>
+	<%= label_tag(:url, "Url:") %>
+	<%= text_field_tag (:url) %>
 	<br/><br/>
-	<%= f.submit "Create Post", :class=>"btn btn-primary" %>
+	<%= submit_tag "Create Post", :class=>"btn btn-primary" %>
 <% end %>
