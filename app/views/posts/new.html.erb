@@ -1,9 +1,26 @@
 <h3> New Post </h2>
-<%= form_tag '/posts', :method => :post, :html => {:class => "well"} do %>
-	<%= label_tag(:title, "Title:") %>
-	<%= text_field_tag :title %>
-	<%= label_tag(:url, "Url:") %>
-	<%= text_field_tag (:url) %>
+<%= form_for @post, :html => {:class => "form-horizontal"} do |f| %>
+
+	<% if @post.errors.any? %>
+		<div class="alert alert-error">
+			<%= @post.errors.full_messages.join("<br/>").html_safe %>
+		</div>
+	<% end %>
+
+	<div class="field">
+		<%= f.label(:title, "Title:") %>
+	</div>
+	<div>
+		<%= f.text_field :title %>
+	</div>
+	<div>
+		<%= f.label(:url, "Url:") %>
+	</div>
+	<div>
+		<%= f.text_field (:url) %>
+	</div>
 	<br/><br/>
-	<%= submit_tag "Create Post", :class=>"btn btn-primary" %>
+	<div class="actions">
+		<%= f.submit "Create Post", :class=>"btn btn-primary" %>
+	</div>
 <% end %>

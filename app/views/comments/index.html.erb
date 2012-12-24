@@ -13,6 +13,11 @@ comments:
 
 
 <%= form_for([@post, @comment]) do |f| %>
+
+	<% if @comment.errors.any? %>
+		<%= @comment.errors.join("<br/>").html %>
+	<% end %>
+
 	<%= f.label(:content, "Comment: ") %>
 	<%= f.text_area(:content, rows:5) %>
 	<br/>

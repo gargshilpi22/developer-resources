@@ -4,6 +4,8 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :votes
 
+  validates :title, presence: true
+  validates :url, presence:true
 
   def vote_number
   	votes.where(:direction => 'up').count - votes.where(:direction => 'down').count

@@ -1,12 +1,28 @@
 
-<h2> <%= link_to @post.title, @post.url%> </h2>
-<h6> No. of comments: <%= @post.comments.count %> </h6>
-comments:
+<h2> <%= link_to @post.title, @post.url %></h2>
+
+<h5> Comments: </h5>
 
 <ul class="inline">
-	<% @post.comments.each do |comment| %>	
+	<% @post.comments.each do |comment| %>
 		<li>
 			<%= comment.content %>
 		</li>
-	<%end%>
-</ul>
+	<% end %>
+</ul>	
+
+
+<%= form_for ([@post, @comment]) do |f| %>
+	
+	<% if @comment.errors.any? %>
+		<div class="alert alert-error">
+			<%= @comment.errors.full_messages.join("<br/>").html_safe %>
+		</div>
+	<% end %>
+
+	<%= f.label :content, "Add Comment: " %>
+	<%= f.text_area :content, rows:5 %>
+	<br/>
+	<%= f.submit "Submit", :class=>"btn" %>
+
+<% end %>

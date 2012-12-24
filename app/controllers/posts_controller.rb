@@ -6,11 +6,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
-		@comments = Comment.find(@post.id) 
-		respond_to do |format|
-    		format.html  # show.html.erb
-    		format.json  { render :json => @post }
-    	end
+		@comment = Comment.new
 	end
 
 	def new
@@ -18,11 +14,12 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		title = params[:title]
-		url = params[:url]
-		post = Post.new(title: title, url: url)
-		post.save
-      	redirect_to(posts_path)
+		@post = Post.create(params[:post])
+		if (@post.errors.any?) 
+			render(new_post_path)
+		else
+      		redirect_to(posts_path)
+      	end
 	end
 
 
