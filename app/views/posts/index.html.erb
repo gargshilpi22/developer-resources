@@ -22,7 +22,7 @@
 					<% end %>
 				</td>
 				<td>
-					<%=link_to post.title, post.url%>
+					<%= display_title_url(post) %>
 					<br/>
 					<div class="mystyle">
 						<%= post.comments.count %>

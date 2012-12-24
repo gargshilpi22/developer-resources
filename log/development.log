@@ -60287,3 +60287,557 @@ Served asset /application.css - 304 Not Modified (3ms)
 
 Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 11:55:19 -0600
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2012-12-24 12:12:58 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = 4
+  Rendered posts/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 12:12:58 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 12:12:58 -0600
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started POST "/posts/4/comments" for 127.0.0.1 at 2012-12-24 12:13:03 -0600
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/2r+E2AyEwqvKfmlys7VYQD6kZJkmJuCvmM2EpFcWjg=", "comment"=>{"content"=>""}, "commit"=>"Submit", "post_id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = 4
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 12:13:03 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 12:13:03 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-24 12:13:05 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 4
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 5[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 6
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 26[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 27
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 28[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 29 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 29 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 29
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 30 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 30 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 30[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 31
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 32[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 33
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 34[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 35
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 36[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 37
+  Rendered posts/index.html.erb within layouts/application (68.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 102.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 12:13:06 -0600
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 12:13:06 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-24 14:51:47 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'[0m
+  Rendered posts/index.html.erb within layouts/application (93.0ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (undefined method `display_title_url' for #<#<Class:0x007fe1b685b3b8>:0x007fe1b6895338>):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%=display_title_url(post)%>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb__2316618078381094412_70303703424740'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb__2316618078381094412_70303703424740'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-24 14:53:50 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'
+  Rendered posts/index.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `starts' for "http://starbucks.com":String):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%=display_title_url(post)%>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/helpers/posts_helper.rb:4:in `display_title_url'
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb__2316618078381094412_70303674722020'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb__2316618078381094412_70303674722020'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.9ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2012-12-24 14:54:45 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'[0m
+  Rendered posts/index.html.erb within layouts/application (108.4ms)
+Completed 500 Internal Server Error in 218ms
+
+ActionView::Template::Error (undefined method `starts' for "http://starbucks.com":String):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%=display_title_url(post)%>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/helpers/posts_helper.rb:4:in `display_title_url'
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb___2267454518768414187_70247854094380'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb___2267454518768414187_70247854094380'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2012-12-24 14:55:14 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'
+  Rendered posts/index.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `starts' for "http://starbucks.com":String):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%=display_title_url(post)%>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/helpers/posts_helper.rb:4:in `display_title_url'
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb___2267454518768414187_70247854094380'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb___2267454518768414187_70247854094380'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.8ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.3ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2012-12-24 14:55:54 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'[0m
+  Rendered posts/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `starts' for "http://starbucks.com":String):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%=display_title_url(post)%>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/helpers/posts_helper.rb:4:in `display_title_url'
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb___2267454518768414187_70247854094380'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb___2267454518768414187_70247854094380'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2012-12-24 14:56:11 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'[0m
+  Rendered posts/index.html.erb within layouts/application (70.3ms)
+Completed 500 Internal Server Error in 143ms
+
+ActionView::Template::Error (undefined method `starts' for "http://starbucks.com":String):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%=display_title_url(post)%>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/helpers/posts_helper.rb:4:in `display_title_url'
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb__2144604322452017996_70363415528400'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb__2144604322452017996_70363415528400'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.7ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2012-12-24 14:59:28 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'
+  Rendered posts/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `starts' for "http://starbucks.com":String):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%= display_title_url(post) %>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/helpers/posts_helper.rb:4:in `display_title_url'
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb__2144604322452017996_70363428859320'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb__2144604322452017996_70363428859320'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.7ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2012-12-24 15:02:27 -0600
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 4
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 5[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 6
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 26[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 27
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 28[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 29 AND "votes"."direction" = 'up'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 29 AND "votes"."direction" = 'down'[0m
+  Rendered posts/index.html.erb within layouts/application (158.5ms)
+Completed 500 Internal Server Error in 171ms
+
+ActionView::Template::Error (undefined method `starts_with?' for nil:NilClass):
+    22: 					<% end %>
+    23: 				</td>
+    24: 				<td>
+    25: 					<%= display_title_url(post) %>
+    26: 					<br/>
+    27: 					<div class="mystyle">
+    28: 						<%= post.comments.count %>
+  app/helpers/posts_helper.rb:4:in `display_title_url'
+  app/views/posts/index.html.erb:25:in `block in _app_views_posts_index_html_erb__2144604322452017996_70363428859320'
+  app/views/posts/index.html.erb:13:in `each'
+  app/views/posts/index.html.erb:13:in `_app_views_posts_index_html_erb__2144604322452017996_70363428859320'
+
+
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/shilpigarg/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2012-12-24 15:04:20 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 4[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 5
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 6[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 26
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 27[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 28
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 31[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 32
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 33[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 34
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 35[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 36
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 37[0m
+  Rendered posts/index.html.erb within layouts/application (62.8ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 121ms (Views: 115.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 15:04:20 -0600
+Served asset /application.css - 304 Not Modified (117ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 15:04:20 -0600
+Served asset /application.js - 304 Not Modified (200ms)
+
+
+Started POST "/posts/28/votes?direction=up" for 127.0.0.1 at 2012-12-24 15:04:25 -0600
+Processing by VotesController#create as HTML
+  Parameters: {"authenticity_token"=>"/2r+E2AyEwqvKfmlys7VYQD6kZJkmJuCvmM2EpFcWjg=", "direction"=>"up", "post_id"=>"28"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "28"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (13.9ms)[0m  INSERT INTO "votes" ("created_at", "direction", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 24 Dec 2012 21:04:25 UTC +00:00], ["direction", "up"], ["post_id", 28], ["updated_at", Mon, 24 Dec 2012 21:04:25 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 29ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-24 15:04:25 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 4[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 5
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 6[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 26
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 27[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 28
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 31[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 32
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 33[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 34
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 35[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 36
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 37[0m
+  Rendered posts/index.html.erb within layouts/application (63.6ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 65.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 15:04:25 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 15:04:25 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2012-12-24 15:04:29 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = 4[0m
+  Rendered posts/show.html.erb within layouts/application (57.9ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 100.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 15:04:29 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 15:04:29 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started POST "/posts/4/comments" for 127.0.0.1 at 2012-12-24 15:04:32 -0600
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/2r+E2AyEwqvKfmlys7VYQD6kZJkmJuCvmM2EpFcWjg=", "comment"=>{"content"=>""}, "commit"=>"Submit", "post_id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = 4[0m
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 15:04:32 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 15:04:32 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2012-12-24 15:04:35 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" 
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 4 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 4[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 5 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 5
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 6 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 6[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 26 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 26
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 27 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 27[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 28 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 28
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 31 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 31[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 32 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 32
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 33 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 33[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 34 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 34
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 35 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 35[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'up'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 36 AND "votes"."direction" = 'down'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 36
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'up'[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."post_id" = 37 AND "votes"."direction" = 'down'
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."post_id" = 37[0m
+  Rendered posts/index.html.erb within layouts/application (59.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 61.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css" for 127.0.0.1 at 2012-12-24 15:04:35 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js" for 127.0.0.1 at 2012-12-24 15:04:35 -0600
+Served asset /application.js - 304 Not Modified (1ms)
