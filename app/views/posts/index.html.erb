@@ -3,7 +3,7 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>No. of comments</th>
+			<th>Votes</th>
 			<th>Title</th>
 			<th>Created at</th>
 		</tr>
@@ -12,7 +12,15 @@
 	<tbody>
 		<% @posts.each do |post| %>
 			<tr>
-				<td><%= post.comments.count %></td>
+				<td class="mystyle">
+					<%= link_to post_votes_path(post, :direction => 'up'), :method => :post do %>
+						<i class="icon-arrow-up"> </i>
+					<% end %>
+					<span> <%= post.vote_number %> </span>
+					<%= link_to post_votes_path(post, :direction => 'down'), :method => :post do %>
+						<i class="icon-arrow-down"> </i>
+					<% end %>
+				</td>
 				<td>
 					<%=link_to post.title, post.url%>
 					<br/>
@@ -23,8 +31,9 @@
 				</td>
 				<td><%= post.created_at %></td>
 			</tr>
-		<% end %>
-	<tbody>
+		<%end%>
+
+	</tbody>
 </table>
 
 <%= link_to 'New', new_post_path, :class => 'btn btn-primary'%>
