@@ -7,12 +7,18 @@
 	<% @post.comments.each do |comment| %>
 		<li>
 			<%= comment.content %>
+			<br/>
+			<div class="mystyle">
+				submitted by <%= comment.user.username %>
+			</div>
+			
 		</li>
 	<% end %>
 </ul>	
 
 
-<%= form_for ([@post, @comment]) do |f| %>
+<% if logged_in? %>
+	<%= form_for ([@post, @comment]) do |f| %>
 	
 	<% if @comment.errors.any? %>
 		<div class="alert alert-error">
@@ -25,4 +31,5 @@
 	<br/>
 	<%= f.submit "Submit", :class=>"btn" %>
 
+<% end %>
 <% end %>

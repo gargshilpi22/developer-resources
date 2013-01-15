@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+	before_filter :require_user, :only => [:create. :new, :edit]
+
 	def new 
 		@comment = Comment.new
 	end
