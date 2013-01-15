@@ -1,0 +1,31 @@
+<h3> sign up </h3>
+
+<% if @user.errors.any? %>
+	<div class="alert alert-error">
+		<%= @user.errors.full_messages.join("<br/>").html_safe %>
+	</div>
+<% end %>
+
+<%= form_for @user, :html => {:class => "form-horizontal"} do |f| %>
+
+	<div class="field">
+		<%= f.label(:username, "Username:") %>
+	</div>
+	<div >
+		<%= f.text_field :username %>
+	</div>
+
+	<br/>
+	<div class="field">
+		<%= f.label(:password, "Password:") %>
+	</div>
+	<div>
+		<%= f.text_field :password %>
+	</div>
+
+	<br/>
+	<div class="actions">
+		<%= f.submit "Sign up", :class=>"btn btn-primary" %>
+	</div>
+
+<% end %>

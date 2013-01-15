@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+	before_filter :require_login
+
 	def index
   		@posts = Post.all
 	end
@@ -22,5 +24,13 @@ class PostsController < ApplicationController
       	end
 	end
 
+
+	def require_login
+
+	end
+
+	def logged_in?
+		!! current_user
+	end
 
 end
