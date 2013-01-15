@@ -27,6 +27,7 @@
 					<div class="mystyle">
 						<%= post.comments.count %>
 						<%= link_to 'comments', post_path(post.id) %>
+						submitted by <%= post.user.username  %>
 					</div>
 				</td>
 				<td><%= post.created_at %></td>
