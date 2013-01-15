@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   
   def require_user
   	if !logged_in?
-  		redirect_to root_path, error: "You must be logged in to take this action"
+  		redirect_to root_path, error: "Login is required"
   	end
   end
 

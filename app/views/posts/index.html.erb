@@ -36,4 +36,6 @@
 	</tbody>
 </table>
 
-<%= link_to 'New', new_post_path, :class => 'btn btn-primary'%>
+<% if logged_in? %>
+	<%= link_to 'New', new_post_path, :class => 'btn btn-primary'%>
+<% end %>

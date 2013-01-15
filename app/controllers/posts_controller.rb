@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-	before_filter :require_login
+	before_filter :require_user, :only => [:new, :create, :edit]
 
 	def index
   		@posts = Post.all
@@ -22,15 +22,6 @@ class PostsController < ApplicationController
 		else
       		redirect_to(posts_path)
       	end
-	end
-
-
-	def require_login
-
-	end
-
-	def logged_in?
-		!! current_user
 	end
 
 end
