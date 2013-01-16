@@ -4,7 +4,7 @@ CourseProject::Application.routes.draw do
   	resources :votes, :only => [:create, :index]
   end
 
-  resources :users, :only => [:new, :create]
+  resources :users, :only => [:new, :create, :show]
   resources :sessions, :only => [:new, :create]
 
   root :to => "posts#index"

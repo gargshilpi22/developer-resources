@@ -8,6 +8,7 @@
 	<ul class="nav">
 		<% if logged_in? %>
 			<li>Welcome! <%=  current_user.username %></li>
+			<li><%= link_to "Profile", user_path(current_user.id) %></li>
 			<li><%= link_to "Logout", logout_path %></li>
 		<% else %>
 			<li><%= link_to "Signup", signup_path %></li>
