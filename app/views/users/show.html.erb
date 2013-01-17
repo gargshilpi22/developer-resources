@@ -41,7 +41,7 @@
 	Twitter Handle:
 	<%= @user.twitter.to_s %>
 
-	<% Twitter.user_timeline(@user.twitter.to_s).each do |tweet| %>
+	<% Twitter.user_timeline(@user.twitter.to_s).last(10).each do |tweet| %>
 		<ul>
 			<li><%= tweet.text %></li>
 		</ul>
