@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-	before_filter :require_user, :only => [:create. :new, :edit]
+	before_filter :require_user, :only => [:create, :new, :edit]
 
 	def new 
 		@comment = Comment.new
@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 	def create
 		@post = Post.find(params[:post_id])
 		@comment = @post.comments.new(params[:comment])
-		@comment.user_id = current_user
+		@comment.user_id = current_user.id
 		if @comment.save
 			render 'posts/show'
 		else
