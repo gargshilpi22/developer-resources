@@ -36,3 +36,16 @@
 	<% end %>	
 
 </p>
+
+<p>
+	Twitter Handle:
+	<%= @user.twitter.to_s %>
+
+	<% Twitter.user_timeline(@user.twitter.to_s).each do |tweet| %>
+		<ul>
+			<li><%= tweet.text %></li>
+		</ul>
+
+	<% end %>
+
+</p>
