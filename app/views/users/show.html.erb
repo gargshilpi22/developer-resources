@@ -10,7 +10,7 @@
 
 <p>
 	Recent Posts:
-	<% @user.posts.each do |post| %>
+	<% @posts.each do |post| %>
 		<ul>
 			<li><%= post.title %></li>
 		</ul>
@@ -19,7 +19,7 @@
 
 <p>
 	Recent Comments:
-	<% @user.comments.each do |comment| %>
+	<% @comments.each do |comment| %>
 		<ul>
 			<li><%= comment.content %></li>
 		</ul>
@@ -27,3 +27,12 @@
 
 </p>
 
+<p>
+	Recent Votes:
+	<% @votes.each do |vote| %>
+		<ul>
+			<li><%= vote.post.title %></li>
+		</ul>
+	<% end %>	
+
+</p>

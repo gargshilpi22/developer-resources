@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 2012122312093123) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "twitter"
   end
 
   create_table "votes", :force => true do |t|
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(:version => 2012122312093123) do
     t.string   "direction"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
 end

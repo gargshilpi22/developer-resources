@@ -17,6 +17,9 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@comments = @user.comments.last(10)
+		@posts = @user.posts.last(10)
+		@votes = @user.votes.last(10)
 		if not @user
 			redirect_to login_path, error: "please login first"
 		end
