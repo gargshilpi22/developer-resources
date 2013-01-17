@@ -16,8 +16,9 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.create(params[:post])
-		if (@post.errors.any?) 
+		@post = Post.new(params[:post])
+		@post.user_id = current_user.id
+		if (!@post.save) 
 			render(new_post_path)
 		else
       		redirect_to(posts_path)

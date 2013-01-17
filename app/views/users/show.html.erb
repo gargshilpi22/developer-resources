@@ -7,3 +7,23 @@
 <div class="field">
 	Created timestamp: <%= @user.created_at %>
 </div>
+
+<p>
+	Recent Posts:
+	<% @user.posts.each do |post| %>
+		<ul>
+			<li><%= post.title %></li>
+		</ul>
+	<% end %>
+</p>
+
+<p>
+	Recent Comments:
+	<% @user.comments.each do |comment| %>
+		<ul>
+			<li><%= comment.content %></li>
+		</ul>
+	<% end %>	
+
+</p>
+
